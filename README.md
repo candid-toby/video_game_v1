@@ -18,9 +18,20 @@ the threshold of "too much regulation attention" for each A_i is determined.
 What happens when hyperfocus / rumination occurs?
 
 
+
 Once formulas and starting values are pre-determined:
 
 Player sees current values and previous values of aspects.
 Player sees current spoons.
 
-Player 
+Player has 5 options to spend spoons on trying to regulate, one aspect per choice.
+
+Player sees if Scenery Traits 1 thru 5 are present.
+
+Player decides whether to Passively Interact or Actively Interact.
+
+Passive Interaction costs less spoons and has narrower immediate impact.
+
+Active Interaction costs more spoons and has a wider set of immediate impacts that can occur. Impacts should be determined in part by Aspect levels.
+
+Immediate impacts of choices: Spoons gained or lost.
