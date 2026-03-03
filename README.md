@@ -13,3 +13,14 @@ Regulation formulas determined on start:
 how decreasing aspect A_i is determined.
 
 the threshold of "too much regulation attention" for each A_i is determined.
+
+
+What happens when hyperfocus / rumination occurs?
+
+
+Once formulas and starting values are pre-determined:
+
+Player sees current values and previous values of aspects.
+Player sees current spoons.
+
+Player 
