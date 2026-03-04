@@ -8,6 +8,45 @@
 <body>
 
 <h1>Game 01</h1>
+
+
+  
+ <script>
+   var aspect_one_init = 1;
+   var aspect_two_init = 2;
+   var aspect_three_init = 3;
+   var aspect_four_init = 4;
+
+   var plays_remaining_init = 5;
+
+   var aspect_one_change = 1;
+  var aspect_two_change = 2;
+   var aspect_three_change = 3;
+   var aspect_four_change = 4;
+
+   var aspect_one = aspect_one_init;
+   var aspect_two = aspect_two_init;
+   var aspect_three = aspect_three_init;
+   var aspect_four = aspect_four_init;
+
+     var aspects_table = "<table><tr><th></th></tr>";
+   
+  aspects_table += "<tr><td>" + aspect_one;
+    aspects_table += "<tr><td>" + aspect_two;
+      aspects_table += "<tr><td>" + aspect_three;
+        aspects_table += "<tr><td>" + aspect_four;
+    
+    aspects_table += "</table>";
+
+      document.getElementById("aspects_table").innerHTML = aspects_table;
+ </script>
+
+      <h1>Aspect Values</h1>
+  <div id="aspects_table"></div>
+
+
+
+  
 <form id="noteForm">
 
 
