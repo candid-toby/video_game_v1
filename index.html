@@ -30,16 +30,18 @@
    var aspect_three = aspect_three_init;
    var aspect_four = aspect_four_init;
 
-     var aspects_table = "<table><tr><th></th></tr>";
-   
-  aspects_table += "<tr><td>" + aspect_one;
-    aspects_table += "<tr><td>" + aspect_two;
-      aspects_table += "<tr><td>" + aspect_three;
-        aspects_table += "<tr><td>" + aspect_four;
+     var aspects_table = "<table><tr><th>'Aspect'</th><th>'Aspect Value'</th></tr>";
+   aspects_table += "<tr><td>" + aspect_one + "</td><td></tr>";
+       aspects_table += "<tr><td>" + aspect_two + "</td><td></tr>";
+       aspects_table += "<tr><td>" + aspect_three + "</td><td></tr>";
+       aspects_table += "<tr><td>" + aspect_four + "</td><td></tr>";
+       
+
     
     aspects_table += "</table>";
 
       document.getElementById("aspects_table").innerHTML = aspects_table;
+
  </script>
 
 
