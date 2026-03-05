@@ -9,6 +9,10 @@
 
 <h1>Game 01</h1>
 
+<div>
+  <button onclick="passively_update_aspects()">Passively Update Aspects</button>
+</div>
+      
       <h1>Aspect Values</h1>
   <div id="aspects_table"></div>
   
@@ -45,7 +49,9 @@
 
 document.getElementById("aspects_table").innerHTML = aspects_table;
 
-
+function passively_update_aspects() {
+    aspect_one = aspect_one + aspect_one_change;
+       }
 
  </script>
 
