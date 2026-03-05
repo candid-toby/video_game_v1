@@ -11,7 +11,7 @@
 
 
   
-<input id="passive_aspect_update" type="button" value="Passively Update Aspects" onclick="passively_update_aspects();" />
+<input id="passive_aspect_update" type="button" value="Passively Update Aspects" />
 
 
   
@@ -52,9 +52,10 @@
 
 document.getElementById("aspects_table").innerHTML = aspects_table;
 
-function passively_update_aspects() {
-    aspect_one = aspect_one + aspect_one_change;
-       }
+
+//- Using an anonymous function:
+document.getElementById("passive_aspect_update").onclick = function () { aspect_one = aspect_one + aspect_one_change; };
+
 
  </script>
 
