@@ -70,12 +70,12 @@
    
    let aspect_value = aspect_init;
    
-   var aspect_one_value = aspect_init[0];
-   var aspect_two_value = aspect_two_init;
-   var aspect_three_value = aspect_three_init;
-   var aspect_four_value = aspect_four_init;
-   var aspect_five_value = aspect_five_init;
-   var aspect_six_value = aspect_six_init;
+   var aspect_one_value = aspect_value[0];
+   var aspect_two_value = aspect_value[1];
+   var aspect_three_value = aspect_value[2];
+   var aspect_four_value = aspect_value[3];
+   var aspect_five_value = aspect_value[4];
+   var aspect_six_value = aspect_value[5];
 
       
 
@@ -89,8 +89,10 @@ document.getElementById("passive_aspect_update").onclick = function () {
   aspect_value[0]= aspect_value[0] + aspect_one_change;
                                                                         aspect_value[1]= aspect_value[1] + aspect_two_change;
   document.getElementById("plays_remaining").innerHTML = plays_remaining_value;
-                                                                       document.getElementById("aspect_one").innerHTML = aspect_value[0];
-                                                                       document.getElementById("aspect_two").innerHTML = aspect_value[1];};
+  aspect_value_one = aspect_value[0];
+  aspect_value_two = aspect_value[1];
+                                                                       document.getElementById("aspect_one").innerHTML = aspect_value_one;
+                                                                       document.getElementById("aspect_two").innerHTML = aspect_value_two};
 
 
 
@@ -100,12 +102,12 @@ document.getElementById("passive_aspect_update").onclick = function () {
    // return aspect_one + aspect_one_change
 //}
 
-   document.getElementById("aspect_one").innerHTML = aspect_value[0];
-   document.getElementById("aspect_two").innerHTML = aspect_value[1];
-   document.getElementById("aspect_three").innerHTML = aspect_value[2];
-   document.getElementById("aspect_four").innerHTML = aspect_value[3];
-   document.getElementById("aspect_five").innerHTML = aspect_value[4];
-   document.getElementById("aspect_six").innerHTML = aspect_value[5];
+   document.getElementById("aspect_one").innerHTML = aspect_value_one;
+   document.getElementById("aspect_two").innerHTML = aspect_value_two;
+   document.getElementById("aspect_three").innerHTML = aspect_value_three;
+   document.getElementById("aspect_four").innerHTML = aspect_value_four;
+   document.getElementById("aspect_five").innerHTML = aspect_value_five;
+   document.getElementById("aspect_six").innerHTML = aspect_value_six;
    
    document.getElementById("plays_remaining").innerHTML = plays_remaining_value;
 
