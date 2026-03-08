@@ -1,8 +1,8 @@
 # video_game_v1
 
-Game 01: Got basic value updating working.
+Prep 01: Got basic value updating working.
 
-Game 02:
+Prep 02:
 
 Player presses start button.
 
