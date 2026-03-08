@@ -119,10 +119,11 @@
    var aspect_value_five = aspect_value[4];
    var aspect_value_six = aspect_value[5];
 
-      
-
-
-
+      var aspect_value_i_value = 0;
+var aspect_threshold_i_value = 0;
+var spoons_dec_i_value = 0;
+var total_spoons_change = 0;
+   
  function spoons_change_fn(aspect_value_i, aspect_threshold_i,spoons_dec_i){
  if (aspect_value_i < aspect_threshold_i) {
   let spoons_change_i = 0
@@ -159,15 +160,15 @@ document.getElementById("passive_aspect_update").onclick = function () {
                                                                        document.getElementById("aspect_one").innerHTML = aspect_value_one;
                                                                        document.getElementById("aspect_two").innerHTML = aspect_value_two;
 for (let i = 0; i < 6; i++) {
-//let aspect_value_i = aspect_value[i];
- // let aspect_threshold_i = aspect_dec_spoons_threshold[i];
-//  let spoons_dec_i = aspect_spoon_dec_array[i];
-// spoons_change_array[i] = spoons_change_fn(aspect_value_i, aspect_threshold_i,spoons_dec_i);
-  spoons_change_array[i] = aspect_spoon_dec_array[i];
+aspect_value_i_value = aspect_value[i];
+aspect_threshold_i_value = aspect_dec_spoons_threshold[i];
+spoons_dec_i_value= aspect_spoon_dec_array[i];
+spoons_change_array[i] = spoons_change_fn(aspect_value_i_value, aspect_threshold_i_value,spoons_dec_i_value);
+  //spoons_change_array[i] = aspect_spoon_dec_array[i];
 };
 
    
-let total_spoons_change = 0;
+total_spoons_change = 0;
 
 for (let i = 0; i < spoons_change_array.length; i++) {
   total_spoons_change += spoons_change_array[i];
