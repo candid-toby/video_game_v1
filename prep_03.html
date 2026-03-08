@@ -86,12 +86,12 @@
    );
 
    let spoons_change_array = Array(
+     1,
+     6,
+     7,
      0,
      0,
-     0,
-     0,
-     0,
-     0
+     8
    );
 
    var plays_remaining_init = 5;
@@ -166,11 +166,11 @@ document.getElementById("passive_aspect_update").onclick = function () {
 //};
 
    
-let total_spoons_change = 5;
+let total_spoons_change = 0;
 
-//for (let i = 0; i < spoons_change_array.length; i++) {
-//    total_spoons_change += spoons_change_array[i];
-//};
+for (let i = 0; i < spoons_change_array.length; i++) {
+  total_spoons_change += spoons_change_array[i];
+};
 
   spoons_value = spoons_value + total_spoons_change;
   
