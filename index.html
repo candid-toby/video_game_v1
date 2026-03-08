@@ -13,7 +13,7 @@
   
 <input id="passive_aspect_update" type="button" value="Passively Update Aspects" />
 
-  
+  Decisions remaining: id="plays_remaining"
       
       <h1>Aspect Values</h1>
 
@@ -35,8 +35,8 @@
  <script>
    var aspect_one_init = 11;
    var aspect_two_init = 22;
-   var aspect_three_init = 3;
-   var aspect_four_init = 4;
+   var aspect_three_init = 33;
+   var aspect_four_init = 44;
 
    var plays_remaining_init = 5;
 
@@ -45,6 +45,7 @@
    var aspect_three_change = 3;
    var aspect_four_change = 4;
 
+   var plays_remaining_value = plays_remaining_init;
    var aspect_one_value = aspect_one_init;
    var aspect_two_value = aspect_two_init;
    var aspect_three_value = aspect_three_init;
@@ -57,8 +58,11 @@
 
 
 //- Using an anonymous function:
-document.getElementById("passive_aspect_update").onclick = function () { aspect_one_value= aspect_one_value + aspect_one_change;
+document.getElementById("passive_aspect_update").onclick = function () { 
+  plays_remaining_value = plays_remaining_value - 1;
+  aspect_one_value= aspect_one_value + aspect_one_change;
                                                                         aspect_two_value= aspect_two_value + aspect_two_change;
+  document.getElementById("plays_remaining").innerHTML = plays_remaining_value;
                                                                        document.getElementById("aspect_one").innerHTML = aspect_one_value;
                                                                        document.getElementById("aspect_two").innerHTML = aspect_two_value;};
 
