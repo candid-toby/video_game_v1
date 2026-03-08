@@ -77,12 +77,12 @@
    );
 
    let aspect_spoon_dec_array = Array(
-     1,
-     2,
-     3,
-     4,
-     5,
-     6
+     -1,
+     -2,
+     -3,
+     -4,
+     -5,
+     -6
    );
 
    let spoons_change_array = Array(
@@ -123,9 +123,30 @@
 
 
 
-//spoons_change_fn = function(){
-//  spoons_change_i =
-//}
+ function spoons_change_fn(aspect_value_i, aspect_threshold_i,spoons_dec_i){
+ if (aspect_value_i < aspect_threshold_i) {
+  let spoons_change_i = 0
+ }
+  else if (aspect_i >= aspect_threshold_i) {
+    let spoons_change_i = spoons_dec_i
+  }
+
+  return spoons_change_i
+}
+
+for (let i = 0; i < 6; i++) {
+  let aspect_value_i = aspect_value[i];
+  let aspect_threshold_i = aspect_dec_spoons_threshold[i];
+  let spoons_dec_i = aspect_spoon_dec_array[i];
+ spoons_change_array[i] = spoons_change_fn(aspect_value_i, aspect_threshold_i,spoons_dec_i);
+}
+
+   
+let total_spoons_change = 0;
+
+for (let i = 0; i < spoons_change_array.length; i++) {
+    total_spoons_change += spoons_change_array[i];
+}
 
 document.getElementById("passive_aspect_update").onclick = function () { 
   plays_remaining_value = plays_remaining_value - 1;
@@ -135,17 +156,28 @@ document.getElementById("passive_aspect_update").onclick = function () {
   aspect_value_one = aspect_value[0];
   aspect_value_two = aspect_value[1];
                                                                        document.getElementById("aspect_one").innerHTML = aspect_value_one;
-                                                                       document.getElementById("aspect_two").innerHTML = aspect_value_two
+                                                                       document.getElementById("aspect_two").innerHTML = aspect_value_two;
+  for (let i = 0; i < 6; i++) {
+  let aspect_value_i = aspect_value[i];
+  let aspect_threshold_i = aspect_dec_spoons_threshold[i];
+  let spoons_dec_i = aspect_spoon_dec_array[i];
+ spoons_change_array[i] = spoons_change_fn(aspect_value_i, aspect_threshold_i,spoons_dec_i);
+}
+
+   
+let total_spoons_change = 0;
+
+for (let i = 0; i < spoons_change_array.length; i++) {
+    total_spoons_change += spoons_change_array[i];
+}
+
+  spoons_value = spoons_value + total_spoons_change;
+  
+  document.getElementById("spoons").innerHTML = spoons_value;
 };
-   //}
 
 
 
-
-
-// function fn_update_aspect_one(aspect_one, aspect_one_change) {
-   // return aspect_one + aspect_one_change
-//}
 
    document.getElementById("aspect_one").innerHTML = aspect_value_one;
    document.getElementById("aspect_two").innerHTML = aspect_value_two;
