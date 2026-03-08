@@ -124,7 +124,7 @@ var aspect_threshold_i_value = 0;
 var spoons_dec_i_value = 0;
 var total_spoons_change = 0;
 
-   var i = 0;
+   //var i = 0;
    
  function spoons_change_fn(aspect_value_i, aspect_threshold_i,spoons_dec_i){
  if (aspect_value_i < aspect_threshold_i) {
@@ -160,20 +160,20 @@ document.getElementById("passive_aspect_update").onclick = function () {
   aspect_value_one = aspect_value[0];
   aspect_value_two = aspect_value[1];
                                                                        document.getElementById("aspect_one").innerHTML = aspect_value_one;
-  i=0;                                                                     document.getElementById("aspect_two").innerHTML = aspect_value_two;
-for ( i = 0; i < 6; i++) {
-aspect_value_i_value = aspect_value[i];
-aspect_threshold_i_value = aspect_dec_spoons_threshold[i];
-spoons_dec_i_value= aspect_spoon_dec_array[i];
-spoons_change_array[i] = spoons_change_fn(aspect_value_i_value, aspect_threshold_i_value,spoons_dec_i_value);
+ // i=0;                                                                     document.getElementById("aspect_two").innerHTML = aspect_value_two;
+for (let i = 0; i < 6; i++) {
+let aspect_value_i_value = aspect_value[i];
+let aspect_threshold_i_value = aspect_dec_spoons_threshold[i];
+let spoons_dec_i_value= aspect_spoon_dec_array[i];
+let spoons_change_array[i] = spoons_change_fn(aspect_value_i_value, aspect_threshold_i_value,spoons_dec_i_value);
   //spoons_change_array[i] = aspect_spoon_dec_array[i];
 };
 
    
-total_spoons_change = 0;
-i=0;
-for (i = 0; i < spoons_change_array.length; i++) {
-  total_spoons_change += spoons_change_array[i];
+let total_spoons_change = 0;
+//i=0;
+for (let i = 0; i < spoons_change_array.length; i++) {
+  let total_spoons_change += spoons_change_array[i];
 };
 
   spoons_value = spoons_value + total_spoons_change;
