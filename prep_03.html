@@ -127,11 +127,13 @@ var total_spoons_change = 0;
    //var i = 0;
    
  function spoons_change_fn(aspect_value_i, aspect_threshold_i,spoons_dec_i){
- if (aspect_value_i < aspect_threshold_i) {
-  let spoons_change_i = 0
+ let spoons_change_i = 0
+   
+   if (aspect_value_i < aspect_threshold_i) {
+  spoons_change_i = 0
  }
-  else if (aspect_i >= aspect_threshold_i) {
-    let spoons_change_i = spoons_dec_i
+  else if (aspect_value_i >= aspect_threshold_i) {
+    spoons_change_i = spoons_dec_i
   }
 
   return spoons_change_i
@@ -162,11 +164,11 @@ document.getElementById("passive_aspect_update").onclick = function () {
                                                                        document.getElementById("aspect_one").innerHTML = aspect_value_one;
  // i=0;                                                                     document.getElementById("aspect_two").innerHTML = aspect_value_two;
 for (let i = 0; i < 6; i++) {
-//let aspect_value_i_value = aspect_value[i];
-//let aspect_threshold_i_value = aspect_dec_spoons_threshold[i];
-//let spoons_dec_i_value= aspect_spoon_dec_array[i];
-//let spoons_change_array[i] = spoons_change_fn(aspect_value_i_value, aspect_threshold_i_value,spoons_dec_i_value);
-  spoons_change_array[i] = aspect_spoon_dec_array[i];
+aspect_value_i_value = aspect_value[i];
+aspect_threshold_i_value = aspect_dec_spoons_threshold[i];
+spoons_dec_i_value= aspect_spoon_dec_array[i];
+spoons_change_array[i] = spoons_change_fn(aspect_value_i_value, aspect_threshold_i_value,spoons_dec_i_value);
+  //spoons_change_array[i] = aspect_spoon_dec_array[i];
 };
 
    
