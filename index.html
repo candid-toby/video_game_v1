@@ -34,7 +34,7 @@
 
  <script>
    var aspect_one_init = 11;
-   var aspect_two_init = 2;
+   var aspect_two_init = 22;
    var aspect_three_init = 3;
    var aspect_four_init = 4;
 
@@ -46,9 +46,9 @@
    var aspect_four_change = 4;
 
    var aspect_one_value = aspect_one_init;
-   var aspect_two = aspect_two_init;
-   var aspect_three = aspect_three_init;
-   var aspect_four = aspect_four_init;
+   var aspect_two_value = aspect_two_init;
+   var aspect_three_value = aspect_three_init;
+   var aspect_four_value = aspect_four_init;
 
       
 
@@ -58,7 +58,9 @@
 
 //- Using an anonymous function:
 document.getElementById("passive_aspect_update").onclick = function () { aspect_one_value= aspect_one_value + aspect_one_change;
-                                                                       document.getElementById("aspect_one").innerHTML = aspect_one_value;};
+                                                                        aspect_one_value= aspect_two_value + aspect_two_change;
+                                                                       document.getElementById("aspect_one").innerHTML = aspect_one_value;
+                                                                       document.getElementById("aspect_two").innerHTML = aspect_two_value;};
 
 
 
@@ -69,6 +71,7 @@ document.getElementById("passive_aspect_update").onclick = function () { aspect_
 //}
 
    document.getElementById("aspect_one").innerHTML = aspect_one_value;
+   document.getElementById("aspect_two").innerHTML = aspect_two_value;
    
 
  </script>
