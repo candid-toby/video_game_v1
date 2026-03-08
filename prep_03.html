@@ -86,12 +86,12 @@
    );
 
    let spoons_change_array = Array(
-     1,
-     6,
-     7,
      0,
      0,
-     8
+     0,
+     0,
+     0,
+     0
    );
 
    var plays_remaining_init = 5;
@@ -158,11 +158,12 @@ document.getElementById("passive_aspect_update").onclick = function () {
   aspect_value_two = aspect_value[1];
                                                                        document.getElementById("aspect_one").innerHTML = aspect_value_one;
                                                                        document.getElementById("aspect_two").innerHTML = aspect_value_two;
-//  for (let i = 0; i < 6; i++) {
-//  let aspect_value_i = aspect_value[i];
-  //let aspect_threshold_i = aspect_dec_spoons_threshold[i];
+for (let i = 0; i < 6; i++) {
+//let aspect_value_i = aspect_value[i];
+ // let aspect_threshold_i = aspect_dec_spoons_threshold[i];
 //  let spoons_dec_i = aspect_spoon_dec_array[i];
 // spoons_change_array[i] = spoons_change_fn(aspect_value_i, aspect_threshold_i,spoons_dec_i);
+  spoons_change_array[i] = aspect_spoon_dec_array[i];
 //};
 
    
