@@ -33,6 +33,8 @@
   <tr><td>Aspect 2</td><td id="aspect_two"></td></tr>
   <tr><td>Aspect 3</td><td id="aspect_three"></td></tr>
   <tr><td>Aspect 4</td><td id="aspect_four"></td></tr>
+  <tr><td>Aspect 5</td><td id="aspect_five"></td></tr>
+  <tr><td>Aspect 6</td><td id="aspect_six"></td></tr>
 </table>
 
   
@@ -43,6 +45,8 @@
    var aspect_two_init = 22;
    var aspect_three_init = 33;
    var aspect_four_init = 44;
+   var aspect_five_init = 55;
+   var aspect_six_init = 66;
 
    var plays_remaining_init = 5;
 
@@ -50,12 +54,16 @@
   var aspect_two_change = 2;
    var aspect_three_change = 3;
    var aspect_four_change = 4;
+   var aspect_five_change = 5;
+   var aspect_six_change = 6;
 
    var plays_remaining_value = plays_remaining_init;
    var aspect_one_value = aspect_one_init;
    var aspect_two_value = aspect_two_init;
    var aspect_three_value = aspect_three_init;
    var aspect_four_value = aspect_four_init;
+   var aspect_five_value = aspect_five_init;
+   var aspect_six_value = aspect_six_init;
 
       
 
@@ -82,6 +90,11 @@ document.getElementById("passive_aspect_update").onclick = function () {
 
    document.getElementById("aspect_one").innerHTML = aspect_one_value;
    document.getElementById("aspect_two").innerHTML = aspect_two_value;
+   document.getElementById("aspect_three").innerHTML = aspect_three_value;
+   document.getElementById("aspect_four").innerHTML = aspect_four_value;
+   document.getElementById("aspect_five").innerHTML = aspect_five_value;
+   document.getElementById("aspect_six").innerHTML = aspect_six_value;
+   
    document.getElementById("plays_remaining").innerHTML = plays_remaining_value;
 
  </script>
